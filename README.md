@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This project focuses on predicting the quality of red and white vinho verde wine samples from the north of Portugal. The goal is to model wine quality based on physicochemical tests. The quality levels range from 0 to 10. The models used include Decision Tree, Random Forest, and K-Nearest Neighbors.
+This project focuses on predicting the quality of red and white vinho verde wine samples from the north of Portugal. The goal is to model wine quality based on physicochemical tests. The quality levels range from 0 to 10. The models used K-Nearest Neighbors.
 
 ## Data Visualization
 
