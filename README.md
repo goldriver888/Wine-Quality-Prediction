@@ -2,31 +2,27 @@
 
 ## Introduction
 
-This project involved the use of machine learning models to predict wine quality levels of red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests. The quality levels range from 0 to 10. The models used include Decision Tree, Random Forest, and K-Nearest Neighbors.
+This project focuses on predicting the quality of red and white vinho verde wine samples from the north of Portugal. The goal is to model wine quality based on physicochemical tests. The quality levels range from 0 to 10. The models used include Decision Tree, Random Forest, and K-Nearest Neighbors.
+
+## Data Visualization
+
+The datasets were initially visualized using bar plots and correlation matrices to understand the distribution of data and the relationships between different features.
 
 ## Data Preprocessing
 
-The dataset was downloaded from the [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/dataset/186/wine+quality). It was then collected, cleaned, and transformed for analysis. We ensured high data quality and consistency throughout the process.
-
-Given the imbalance in the classes of the target variable, we used the Synthetic Minority Over-sampling Technique (SMOTE) to oversample the minority class. This technique works by creating synthetic samples from the minor class instead of creating copies, which helps to increase the number of minority class instances and balance the dataset.
+The wine quality was categorized into two categories: 'low' (0-5) and 'high' (6-10). This transformed the multi-class problem into a binary classification problem. Label Encoding was then applied to convert these categorical labels into numerical form.
 
 ## Model Training and Evaluation
 
-The models were trained on a resampled training set and tested on a separate testing set. The performance of each model was evaluated using precision, recall, f1-score, and AUC (Area Under the ROC Curve).
+A K-Nearest Neighbors (KNN) classifier was trained on the red and white wine datasets separately. The performance of the models was evaluated using various metrics like accuracy, precision, recall, and f1-score.
 
-For each model, the quality levels that were predicted most frequently are as follows:
+For the red wine dataset, the baseline KNN model achieved an accuracy of 75%. After hyperparameter tuning, the accuracy increased to 82%. The cross-validation scores ranged from 0.8242 to 0.8633 with a mean score of 0.8444.
 
-- **Decision Tree Classifier**: The Decision Tree classifier achieved an accuracy of 59%, with an AUC of 0.63. The model most frequently predicted wine quality levels of 5 and 6.
-
-- **Random Forest Classifier**: The Random Forest classifier achieved an accuracy of 64%, with an AUC of 0.68. The model most frequently predicted wine quality levels of 5 and 6.
-
-- **K-Nearest Neighbors Classifier**: The K-Nearest Neighbors classifier achieved an accuracy of 43%, with an AUC of 0.61. The model most frequently predicted wine quality levels of 5 and 6.
-
-The histograms of the original data also show a high frequency of wine quality levels around 5 and 6, suggesting that the models are correctly learning the underlying distribution of the data.
+For the white wine dataset, the baseline KNN model achieved an accuracy of 38%. After hyperparameter tuning, the accuracy increased to 83%. The cross-validation scores ranged from 0.7908 to 0.8214 with a mean score of 0.8060.
 
 ## Conclusion
 
-Among the three models, the Random Forest classifier performed the best in terms of accuracy and AUC. However, there is still room for improvement. Future work could involve tuning the hyperparameters of the models, trying different resampling techniques, or using different features for training the models.
+The hyperparameter-tuned KNN models demonstrated superior performance compared to the baseline models in predicting the quality category of both red and white wines. This project is a good example of how machine learning can be applied to solve classification problems in the wine industry. Future work could explore other machine learning models and feature engineering techniques to further improve the prediction accuracy.
 
 ## Recommendations
 
